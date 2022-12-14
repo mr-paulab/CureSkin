@@ -1,10 +1,5 @@
-# from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
-# SEARCH_ICON = (By.CSS_SELECTOR, 'modal__toggle-open.icon.icon-search')
-# CART_ICON = (By.CSS_SELECTOR, 'header__icon--cart.link.focus-inset')
-# ACCOUNT_ICON = (By.CSS_SELECTOR, "[href*='/account/login']")
 
 
 class Page:
@@ -17,10 +12,16 @@ class Page:
         self.refund_url = 'https://shop.cureskin.com/policies/refund-policy'
         self.privacy_url = 'https://shop.cureskin.com/policies/privacy-policy'
         self.shipping_url = 'https://shop.cureskin.com/policies/shipping-policy'
+        self.results_url = 'https://shop.cureskin.com/search?q=cure'
 
     def open_base_url(self, end_url=''):
         url = f'{self.base_url}{end_url}'
         print(f'Opening URL: {url}')
+        self.driver.get(url)
+
+    def open_results_url(self, end_url=''):
+        url = f'{self.results_url}{end_url}'
+        print(f'Opening Search Results URL: {url}')
         self.driver.get(url)
 
     def find_element(self, *locator):
