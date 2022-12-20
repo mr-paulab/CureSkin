@@ -10,6 +10,13 @@ def browser_init(context):
     """
     c = webdriver.ChromeOptions()
     c.add_argument("--incognito")
+    c.add_argument("--headless")
+    c.add_argument("--disable-gpu")
+    c.add_argument("--window-size=1920,1200")
+    c.add_argument("--ignore-certificate-errors")
+    c.add_argument("--disable-extensions")
+    c.add_argument("--no-sandbox")
+    c.add_argument("--disable-dev-shm-usage")
     context.driver = webdriver.Chrome(options=c)
     # context.browser = webdriver.Safari()
     # context.browser = webdriver.Firefox()
