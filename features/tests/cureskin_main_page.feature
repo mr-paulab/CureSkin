@@ -7,6 +7,6 @@
     Examples:
     |value           |
     |Terms of Service|
-    |Refund Policy   |
-    |Privacy Policy  |
-    |Shipping Policy |
+#    |Refund Policy   |
+#    |Privacy Policy  |
+#    |Shipping Policy |

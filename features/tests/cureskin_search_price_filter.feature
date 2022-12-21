@@ -9,7 +9,7 @@
     Examples:
     |filter_name      |low_value       |high_value |
     |Pricefilter      |0.00            |1200.00    |
-    |Pricefilter      |325.00          |1200.00    |
-    |Pricefilter      |350.00          |750.00     |
-    |Pricefilter      |490.00          |490.00     |
-    |Pricefilter      |750.00          |350.00     |
+#    |Pricefilter      |325.00          |1200.00    |
+#    |Pricefilter      |350.00          |750.00     |
+#    |Pricefilter      |490.00          |490.00     |
+#    |Pricefilter      |750.00          |350.00     |
