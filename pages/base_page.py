@@ -15,6 +15,7 @@ class Page:
         self.results_url = 'https://shop.cureskin.com/search?q=cure'
         self.first_product_url = 'https://shop.cureskin.com/products/cureskin-under-eye-gel'
         self.second_product_url = 'https://shop.cureskin.com/products/cureskin-cleansing-gel'
+        self.buyitnow_url = 'https://shop.cureskin.com/checkouts/c/'
 
     def open_base_url(self, end_url=''):
         url = f'{self.base_url}{end_url}'
@@ -47,3 +48,7 @@ class Page:
         url = f'{self.second_product_url}{end_url}'
         print(f'Opening URL: {url}')
         self.driver.get(url)
+
+    def verify_buyitnow_url(self, buyitnow_url):
+        self.wait.until(EC.url_contains(buyitnow_url))
+

@@ -1,14 +1,17 @@
 from behave import given, when, then
+from time import sleep
 
 
 @given('open search results page')
 def open_search_results(context):
     context.app.search_results_page.open_search_results_url()
+    sleep(4)
 
 
 @when('click {filter_name} open')
 def click_filter_open(context, filter_name):
     context.app.search_results_page.click_filter_name(filter_name)
+    sleep(6)
 
 
 @then('enter low value {low_value}')

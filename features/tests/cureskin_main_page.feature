@@ -6,7 +6,7 @@
     Then verify page by <value>
     Examples:
     |value           |
-    |Terms of Service|
-#    |Refund Policy   |
-#    |Privacy Policy  |
-#    |Shipping Policy |
+#    |Terms of Service|
+    |Refund Policy   |
+    |Privacy Policy  |
+    |Shipping Policy |

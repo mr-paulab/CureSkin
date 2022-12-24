@@ -23,3 +23,4 @@ class MainPage(Page):
 
     def verify_url(self, value):
         self.verify_policy_url(self.POLICY_URLS[value])
+

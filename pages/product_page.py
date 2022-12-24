@@ -12,6 +12,7 @@ class ProductPage(Page):
     CART_LINK = (By.CSS_SELECTOR, "[href='https://shop.cureskin.com/cart'")
     FIRST_ITEM = (By.ID, "CartItem-1")
     SECOND_ITEM = (By.ID, "CartItem-2")
+    BUYITNOW_URL = "//shop.cureskin.com/checkouts/"
 
     def open_first_product_page(self):
         self.open_fproduct_url()
@@ -33,3 +34,6 @@ class ProductPage(Page):
 
     def see_second_cart_item(self):
         assert (self.find_element(*self.SECOND_ITEM)), '2nd cart item not found'
+
+    def verify_buyitnow(self, value):
+        self.verify_buyitnow_url(self.BUYITNOW_URL)

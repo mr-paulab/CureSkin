@@ -5,17 +5,20 @@ from time import sleep
 
 class SearchResultsPage(Page):
     FILTER_LOCATORS = \
-        {"Pricefilter": (By.CSS_SELECTOR, "#Details-1-template--14367827656788__main summary div span"),
+        {"Pricefilter": (By.CSS_SELECTOR, "#Details-1-template--"),
+# 14367827656788__main summary div span"),
          "low_value": (By.CSS_SELECTOR, "input#Filter-Price-GTE.field__input"),
          "high_value": (By.CSS_SELECTOR, "input#Filter-Price-LTE.field__input"),
-         "Pricefilter2": (By.CSS_SELECTOR,"#Facet-1-template--14367827656788__main.facets__display")}
+         "Pricefilter2": (By.CSS_SELECTOR,"#Facet-1-template--")}
+# 14367827656788__main.facets__display")}
 
     def open_search_results_url(self):
         self.open_results_url()
+        sleep(5)
 
     def click_filter_name(self, filter_name):
         self.find_element(*self.FILTER_LOCATORS[filter_name]).click()
-        sleep(2)
+        sleep(5)
 
     def enter_low_value(self, low_value):
         low_element = self.find_element(*self.FILTER_LOCATORS["low_value"])
@@ -27,10 +30,10 @@ class SearchResultsPage(Page):
         high_element = self.find_element(*self.FILTER_LOCATORS["high_value"])
         high_element.clear()
         high_element.send_keys(high_value)
-        sleep(2)
+        sleep(5)
 
     def close_filter(self, filter_name):
         filter_name += '2'
         print(filter_name)
         self.find_element(*self.FILTER_LOCATORS[filter_name]).click()
-        sleep(2)
+        sleep(5)
